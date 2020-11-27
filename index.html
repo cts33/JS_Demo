@@ -11,13 +11,31 @@
 		<script type="text/javascript">
 			var stu = {
 				name:"lisi",
-				age:18
+				age:18,
+				// 定义方法
+				setName:function(){
+					name = "yyy";
+					console.log(name)
+				}
 			};
 			// 遍历对象
 			for(var k in stu){
 				// k key value - stu[k]
 				console.log(k+"--"+stu[k]);
 			}
+			
+			stu.setName();
+			
+			// var date = new Date();
+			// var dd = date.getDate();
+			
+			// console.log(dd)
+			
+			var result = new String("this is str");
+			var up = result.toLocaleUpperCase();
+			
+			console.log(up);
+			// 简单形式传参
 		</script>
 	</body>
 </html>

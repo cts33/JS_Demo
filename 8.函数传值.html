@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 内置函数，javacript提供好的对象 Math Date Array  String-->
+		<!-- 函数内部传送基本数据类型，相当于方法内部复制一份数据，不影响外部变量的值 -->
+		<script type="text/javascript">
+			// function xx(index) {
+			// 	index++;
+			// 	console.log("result=" + index);
+			// }
+			// var a = 10;
+			// xx(a);
+			// console.log(a);
+			
+			
+			
+			// 复杂类型
+			function Person(name){
+				this.name = name;
+			}
+			
+			function setName(per){
+				 
+				per.name ="uuuu";
+				
+				console.log(per.name);
+			}
+			
+			var per = new Person("lisi");
+			
+			setName(per);
+			
+			console.log(per.name);
+	 
+			
+		</script>
+	</body>
+</html>
