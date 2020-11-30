@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 鼠标常用事件 -->
+		<!-- 
+		 onclick 点击事件
+		 onmouseover 鼠标经过
+		 onmouseout 鼠标离开
+		 onfocus 获取焦点
+		 onblur 失去焦点
+		 onmousemove 鼠标移动
+		 onmouseup 鼠标抬起触发
+		 onmousedown 鼠标按下触发
+		 -->
+		
+	</head>
+	<body>
+
+		<button>删除</button>
+		<button id="add" type="button"> 增加</button>
+		<ul>
+			<li>熊大</li>
+			<li>熊二</li>
+			<li>光头强</li>
+		</ul>
+
+
+		<div class="father" style="width: 300px;background-color: pink;">
+			<div class="son" style="background-color: red;width: 200px;">son儿子</div>
+		</div>
+		<script>
+			// 1.获取元素
+			var ul = document.querySelector('ul');
+			var btn = document.querySelector('button');
+			var add = document.getElementById("add");
+			// 2. 删除元素  node.removeChild(child)
+			// ul.removeChild(ul.children[0]);
+			// 3. 点击按钮依次删除里面的孩子
+			btn.onclick = function() {
+				if (ul.children.length == 0) {
+					btn.disable = true;
+				} else {
+					// remove节点
+					ul.removeChild(ul.children[0]);
+				}
+			}
+			add.onclick = function() {
+				var ii = ul.children[ul.children.length - 1];
+				ii.innerHTML = "UUUU";
+				//add node   cloneNode（） 默认浅拷贝，true 深拷贝
+				ul.appendChild(ii.cloneNode(true));
+			}
+			// 事件委托
+			ul.addEventListener("click", function(e) {
+				e.target.style.backgroundColor = "blue";
+			})
+
+			var son = document.querySelector('.son');
+			// 给son注册单击事件
+			son.addEventListener('click', function(e) {
+				alert('son');
+				e.stopPropagation(); // stop 停止  Propagation 传播
+				window.event.cancelBubble = true; // 非标准 cancel 取消 bubble 泡泡
+			}, false);
+
+			var father = document.querySelector('.father');
+			// 给father注册单击事件
+			father.addEventListener('click', function() {
+				alert('father');
+			}, false);
+			// 给document注册单击事件
+			document.addEventListener('click', function() {
+				alert('document');
+			})
+		</script>
+	</body>
+</html>

@@ -6,6 +6,9 @@
 	</head>
 	<body>
 
+
+
+
 		<!-- DOM document object model 文档结构模型 -->
 		<!-- dom 树 
 		 element.getElementsById(id); 通过id 查询
@@ -38,10 +41,47 @@
 			
 			element.innerHTML
 		 -->
-		<script type="text/javascript">
-			
 
+		<div>
+
+			<p id="date">显示当前日期</p>
+			<button type="button" name="获取当前日期" onclick="getXX()"> 获取当前日期</button>
+
+			<p>innerText innerHTML的区别,输入内容为'\<strong>'今天是：'\</strong> 2019'</p>
+
+			<button id="test_text_btn" type="button">innerText</button>
+			<button id="test_html_btn" type="button">innerHTML</button>
+
+		</div>
+		<script type="text/javascript">
+			var btn = document.querySelector("button");
+			var p = document.querySelector("p");
+			// var btn1;
+
+			function getXX() {
+				var date = new Date();
+				var result = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+				console.log(result);
+				p.innerHTML = result;
+
+			};
+
+
+			btn1 = document.getElementById("test_text_btn");
+			var btn2 = document.getElementById("test_html_btn");
+
+			btn1.onclick = function() {
+				// 	innerText会去除空格和换行，而innerHTML会保留空格和换行
+				btn1.innerText = '<strong>今天是：</strong> 2019';
+			};
+
+			btn2.onclick = function() {
+				// innerText不会识别html，而innerHTML会识别标签元素且忽略
+				btn2.innerHTML = '<strong>今天是：</strong> 2019';
+				console.log("btn2 click!")
+				btn1.style.display = "none";
+			};
 		</script>
- 
+
 	</body>
 </html>
