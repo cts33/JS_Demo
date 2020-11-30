@@ -3,29 +3,76 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<style type="text/css">
+			.banner {
+				
+				width: 100%;
+				height: 200px;
+				background-image: url(img/a.jpg);
+				background-size: auto;
+			}
+			ul {
+				position: relative;
+			}
+
+			li {
+				position: absolute;
+				float: left;
+				list-style: none;
+				left: 0;
+				bottom: 0;
+			}
+
+			li img {
+				width: 50px;
+				height: 50px;
+			}
+		</style>
 	</head>
 	<body>
-		<button style="background-color: pink;">按钮1</button>
-		<button>按钮2</button>
-		<button>按钮3</button>
-		<button>按钮4</button>
-		<button>按钮5</button>
+		<div>
+			<button style="background-color: pink;">按钮1</button>
+			<button>按钮2</button>
+			<button>按钮3</button>
+			<button>按钮4</button>
+			<button>按钮5</button>
+		</div>
+
 		<script>
-		    // 1. 获取所有按钮元素
-		    var btns = document.getElementsByTagName('button');
-		    // btns得到的是伪数组  里面的每一个元素 btns[i]
-		    for (var i = 0; i < btns.length; i++) {
-		        btns[i].onclick = function() {
-		            // (1) 我们先把所有的按钮背景颜色去掉  干掉所有人
-		            for (var i = 0; i < btns.length; i++) {
-		                btns[i].style.backgroundColor = '';
-		            }
-		            // (2) 然后才让当前的元素背景颜色为pink 留下我自己
-		            this.style.backgroundColor = 'pink';
-		        }
-		    }
+			// 1. 获取所有按钮元素
+			var btns = document.getElementsByTagName('button');
+			// btns得到的是伪数组  里面的每一个元素 btns[i]
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].onclick = function() {
+					// (1) 我们先把所有的按钮背景颜色去掉  干掉所有人
+					for (var i = 0; i < btns.length; i++) {
+						btns[i].style.backgroundColor = '';
+					}
+					// (2) 然后才让当前的元素背景颜色为pink 留下我自己
+					this.style.backgroundColor = 'pink';
+				}
+			}
+
+
+			var banner = document.getElementsByTagName(".banner");
+			var imgs = document.querySelector("ul").querySelectorAll("img");
+
+			for (var i = 0; i < imgs.length; i++) {
+				imgs[i].onclick = function() {
+					banner.style.backgroundImage = 'url(' + this.src + ')';
+				}
+			}
 		</script>
-		
-		
+		<div class="banner">
+
+
+			<ul>
+				<li><img src="img/a.jpg"></li>
+				<li><img src="img/b.jpg"></li>
+				<li><img src="img/c.jpg"></li>
+
+			</ul>
+		</div>
+
 	</body>
 </html>
