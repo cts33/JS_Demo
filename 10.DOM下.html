@@ -21,6 +21,11 @@
 		 disabled
 		 selected
 		 value
+		 
+		 
+		 自定义属性
+		 ele.setAttribute("index",1);
+		 ele.getAttribute("index");
 		 -->
 		<style type="text/css">
 			.banner {
@@ -51,6 +56,10 @@
 				height: 50px;
 
 			}
+
+			.bg {
+				background-color: pink;
+			}
 		</style>
 	</head>
 	<body>
@@ -73,6 +82,27 @@
 
 			</div>
 
+		</div>
+
+		<div>
+
+			<table border="1px" cellspacing="0" cellpadding="0">
+				<tr>
+					<th>Header</th>
+					<th>des</th>
+					<th>pos</th>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+				<tr>
+					<td>Data</td>
+					<td>Data</td>
+					<td>Data</td>
+				</tr>
+			</table>
 		</div>
 		<script>
 			// 1. 获取所有按钮元素
@@ -99,6 +129,23 @@
 					banner[0].style.backgroundImage = 'url(' + this.src + ')';
 					console.log(this.src);
 				}
+			}
+
+
+			// 表格偶数-- 变色
+			var tr = document.getElementsByTagName("tr");
+			for (var i = 0; i < tr.length; i++) {
+				// 鼠标移动
+				tr[i].onmouseover = function() {
+
+					this.className = 'bg';
+				}
+				// 鼠标移出
+				tr[i].onmouseout = function() {
+
+					this.className = '';
+				}
+
 			}
 		</script>
 
