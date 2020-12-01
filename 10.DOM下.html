@@ -26,6 +26,18 @@
 		 自定义属性
 		 ele.setAttribute("index",1);
 		 ele.getAttribute("index");
+		
+		 
+		 节点操作
+		 parentNode 
+		 childNodes 子节点 包含多个
+		 nextSibling 下一个节点
+		 previousSibling 上一个节点
+		 
+		 creatElement() 创建节点
+		 node.appendChild();添加节点
+		 node.insertBefore(child,index) 插入节点
+		 
 		 -->
 		<style type="text/css">
 			.banner {
@@ -127,7 +139,7 @@
 				imgs[i].onclick = function() {
 
 					banner[0].style.backgroundImage = 'url(' + this.src + ')';
-					console.log(this.src);
+					console.log(this.parentNode);
 				}
 			}
 
