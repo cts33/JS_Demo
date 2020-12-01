@@ -3,29 +3,53 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+
+		<!-- DOM 文档树模型
+		 获取元素
+		 getElementById()
+		 getElementByTagName() 根据标签名
+		 getElementByClassName() 根据类名
+		 document.querySeletor("li"); 返回第一个对象
+		 document.querySeletorAll(); 根据选择器返回所有对象
+		 
+		 innerText 处理文本内容，但是去除html 空格换行
+		 innerHtml 处理文本内容，但是保留Html 空格换行
+		 
+		 修改表单属性
+		 type
+		 checked
+		 disabled
+		 selected
+		 value
+		 -->
 		<style type="text/css">
 			.banner {
-				
-				width: 100%;
-				height: 200px;
-				background-image: url(img/a.jpg);
-				background-size: auto;
-			}
-			ul {
 				position: relative;
+				width: 300px;
+				margin: 0 auto;
+				height: 200px;
+				/* background-image: url(img/a.jpg); */
+				background-size: 100%;
+
+			}
+
+			.center {
+				position: absolute;
+				left: 50px;
+				bottom: 10px;
 			}
 
 			li {
-				position: absolute;
+
 				float: left;
 				list-style: none;
-				left: 0;
-				bottom: 0;
+
 			}
 
 			li img {
 				width: 50px;
 				height: 50px;
+
 			}
 		</style>
 	</head>
@@ -37,7 +61,19 @@
 			<button>按钮4</button>
 			<button>按钮5</button>
 		</div>
+		<div class="banner" style="background-color: aliceblue;">
 
+			<div class="center">
+				<ul>
+					<li><img src="img/a.jpg"></li>
+					<li><img src="img/b.jpg"></li>
+					<li><img src="img/c.jpg"></li>
+
+				</ul>
+
+			</div>
+
+		</div>
 		<script>
 			// 1. 获取所有按钮元素
 			var btns = document.getElementsByTagName('button');
@@ -53,26 +89,19 @@
 				}
 			}
 
-
-			var banner = document.getElementsByTagName(".banner");
-			var imgs = document.querySelector("ul").querySelectorAll("img");
+			// 此处banner是复数
+			var banner = document.getElementsByClassName("banner");
+			var imgs = document.querySelectorAll("img");
 
 			for (var i = 0; i < imgs.length; i++) {
 				imgs[i].onclick = function() {
-					banner.style.backgroundImage = 'url(' + this.src + ')';
+
+					banner[0].style.backgroundImage = 'url(' + this.src + ')';
+					console.log(this.src);
 				}
 			}
 		</script>
-		<div class="banner">
 
-
-			<ul>
-				<li><img src="img/a.jpg"></li>
-				<li><img src="img/b.jpg"></li>
-				<li><img src="img/c.jpg"></li>
-
-			</ul>
-		</div>
 
 	</body>
 </html>
