@@ -13,8 +13,38 @@
 		 onmousemove 鼠标移动
 		 onmouseup 鼠标抬起触发
 		 onmousedown 鼠标按下触发
+		 
+		 阻止默认行为：
+		 
+		 var a = document.querySelector('a');
+		 a.addEventListener('click', function(e) {
+		          e.preventDefault(); //  dom 标准写法
+		 });
+		 
+		 阻止事件冒泡e.stopPropagation()
+		  var son = document.querySelector('.son');
+		 	// 给son注册单击事件
+		  son.addEventListener('click', function(e) {
+		         e.stopPropagation(); // stop 停止  Propagation 传播
+		       
+		   }, false);
+		   
+		 事件委托 ：给父节点添加侦听器， 利用事件冒泡影响每一个子节点
+		     var ul = document.querySelector('ul');
+		     ul.addEventListener('click', function(e) {
+		         // e.target 点击的每个item
+		         e.target.style.backgroundColor = 'pink';
+		     })  
+		 
+		 获取鼠标坐标
+		 
+		 document.addEventListener('click', function(e) {
+		             e.clientX 可视区 坐标
+					 e.pageX 页面文档坐标
+					 e.screenX 电脑屏幕坐标
+		         })
 		 -->
-		
+
 	</head>
 	<body>
 
@@ -30,7 +60,12 @@
 		<div class="father" style="width: 300px;background-color: pink;">
 			<div class="son" style="background-color: red;width: 200px;">son儿子</div>
 		</div>
+		
+		
 		<script>
+			
+			
+		 
 			// 1.获取元素
 			var ul = document.querySelector('ul');
 			var btn = document.querySelector('button');
