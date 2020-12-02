@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+		 
+		  事件捕获 :事件由外向内传递
+			wrap.addEventListener("click", function() {
+				alert("789");
+			}, true);
+		 
+		  事件冒泡：事件由最深的元素开始，向上传播，由内向外
+		  
+		 	false 让元素在冒泡阶段处理事件
+		 	wrap.addEventListener("click", function() {
+		 		alert("789");
+		 	}, false);
+			
+			当元素添加了捕获事件和冒泡事件
+			
+			先执行捕获事件顺序，在执行冒泡事件顺序
+		 -->
+
+
+		<style type="text/css">
+			#wrap {
+				width: 200px;
+				height: 200px;
+				background: orange;
+			}
+
+			#outer {
+				position: relative;
+				top: 50px;
+				left: 50px;
+				width: 100px;
+				height: 100px;
+				background: pink;
+			}
+
+			#inner {
+				position: relative;
+				width: 50px;
+				top: 25px;
+				left: 25px;
+				height: 50px;
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="wrap">
+			<div id="outer">
+				<div id="inner">
+
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			var wrap = document.getElementById("wrap");
+			var outer = document.getElementById("outer");
+			var inner = document.getElementById("inner");
+			wrap.addEventListener("click", function() {
+
+				alert("789");
+			}, true);
+			outer.addEventListener("click", function() {
+
+				alert("456");
+			}, true);
+			inner.addEventListener("click", function() {
+
+				alert("123");
+			}, true);
+
+
+			wrap.addEventListener("click", function() {
+
+				alert("wrap");
+			});
+			outer.addEventListener("click", function() {
+
+				alert("outer");
+			});
+			inner.addEventListener("click", function() {
+
+				alert("inner");
+			});
+		</script>
+	</body>
+</html>
