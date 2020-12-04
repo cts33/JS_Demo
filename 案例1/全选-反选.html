@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			. {
+				margin: 0;
+				padding: 0;
+			}
+
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+				border: solid 1px #666;
+			}
+		</style>
+	</head>
+	<body>
+
+		<table border="1px" cellspacing="0" cellpadding="5px">
+			<thead style="background-color: skyblue;">
+
+				<tr>
+					<td><input type="checkbox" name="" id="all_check" value="" /></td>
+					<td>goods</td>
+					<td>价格</td>
+				</tr>
+
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone8</td>
+					<td>8989</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone8</td>
+					<td>8989</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" value="" /></td>
+					<td>iphone8</td>
+					<td>8989</td>
+				</tr>
+			</tbody>
+
+		</table>
+
+		<script type="text/javascript">
+			var all = document.getElementById('all_check');
+			var allitem = document.querySelector('tbody').querySelectorAll('input');
+			all.onclick = function() {
+				
+				for (var i = 0; i < allitem.length; i++) {
+					 
+					allitem[i].checked =this.checked;
+				}
+			}
+			
+			for (var i = 0; i < allitem.length; i++) { 
+				allitem[i].onclick = function(){
+					let isAllcheck =true;
+					for (var i = 0; i < allitem.length; i++) {
+						if(!allitem[i].checked){
+							
+							isAllcheck = false;
+							break;
+						}
+					}
+					if(isAllcheck){
+						
+						all.checked = true;
+					}else{
+						all.checked = false;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
