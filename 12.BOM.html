@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title></title>
 	</head>
-	
+
 	<!-- 键盘事件 
 	onkeyup
 	onkeydown
@@ -43,24 +43,32 @@
 		
 		
 	-->
-	
+
 	<body>
-		
-		
+
+
 		<script type="text/javascript">
 			// var item = document.getElementById("");
 			// item.addEventListener("onkeyup",function(){
-				
+
 			// });
-			
-			window.setTimeout(function(){
-				
+
+			console.log("--"+this);
+
+			fn();
+
+			function fn() {
+				console.log("--"+this);
+			}
+
+			window.setTimeout(function() {
+
 				console.log("--")
-			},1000);
-			
-			setInterval(function(){
+			}, 1000);
+
+			setInterval(function() {
 				console.log("000")
-			},1000);
+			}, 1000);
 		</script>
 	</body>
 </html>
