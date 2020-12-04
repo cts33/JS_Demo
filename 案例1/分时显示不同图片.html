@@ -46,6 +46,9 @@
 			<input type="password" placeholder="普通输入框">
 		</div>
 
+<hr >
+
+		<input id="hidden-input" type="text" src="" value="点击这个框就隐藏里面的内容" />
 
 		<script type="text/javascript">
 			var img = document.querySelector("img");
@@ -74,31 +77,42 @@
 				input.value = "选中了！";
 				this.disabled = true;
 			}
-			
-			
-			
-			
-			
-			
-			
+
+
+
+
+
+
+
 			// 京东显示隐藏密码
 			var jdbox = document.getElementsByClassName("jd-box");
 			var img = jdbox[0].querySelector("img");
-			
+
 			var input = jdbox[0].querySelector('input');
-			var flag=0;
-			img.onclick = function(){
-				
-				if(flag==0){
-					flag=1;
-					img.src ='images/open.png';
+			var flag = 0;
+			img.onclick = function() {
+
+				if (flag == 0) {
+					flag = 1;
+					img.src = 'images/open.png';
 					input.type = 'text';
-				}else{
-					flag=0;
-					img.src ='images/close.png';
-					input.type ='password';
+				} else {
+					flag = 0;
+					img.src = 'images/close.png';
+					input.type = 'password';
 				}
 			};
+			
+			
+			var hiddenInput = document.getElementById('hidden-input');
+			 hiddenInput.onfocus = function(){
+				 this.value ="";
+			 }
+			 
+			 hiddenInput.onblur = function(){
+				 
+				  this.value ="手机号码";
+			 }
 		</script>
 	</body>
 </html>
