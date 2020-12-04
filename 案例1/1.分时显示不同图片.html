@@ -24,25 +24,27 @@
 				right: 0;
 				bottom: 0;
 			}
-			
-			#jiaoyan{
+
+			#jiaoyan {
 				width: 600px;
 			}
-			.message{
+
+			.message {
 				display: inline-block;
 				font-size: 12px;
 				background: url(./images/mess.png) no-repeat left center;
 				padding-left: 20px;
 			}
-			
-			.wrong{
+
+			.wrong {
 				color: red;
 				background-image: url(images/wrong.png);
 			}
-			 .right{
-				 color: green;
-				 background-image: url(images/right.png);
-			 }
+
+			.right {
+				color: green;
+				background-image: url(images/right.png);
+			}
 		</style>
 	</head>
 	<body>
@@ -71,31 +73,50 @@
 
 		<hr>
 		<div id="jiaoyan">
-			 
+
 			<input type="text" name="" id="" value="" />
-			
+
 			<p class="message wrong">请输入6-16位数字</p>
 		</div>
 
+		<button type="button" id="light">开关灯</button>
+
 
 		<script type="text/javascript">
-			
+			var light = document.getElementById('light');
+			var flag = false;
+			light.onclick = function() {
+
+				if (!flag) {
+					document.body.style.backgroundColor = 'black';
+					flag = true;
+				} else {
+
+					flag = false;
+					document.body.style.backgroundColor = 'white';
+
+				}
+
+
+			}
+
+
 			var jiaoDiv = document.getElementById('jiaoyan');
 			var jInput = jiaoDiv.querySelector('input');
 			var mess = jiaoDiv.querySelector('p');
-			jInput.onblur = function(){
-				if(this.value.length<6||this.value.length>16){
+			jInput.onblur = function() {
+				if (this.value.length < 6 || this.value.length > 16) {
 					mess.innerHTML = '请输入6-16位数字';
-					mess.className='message wrong';
-				}else{
-					mess.innerHTML='输入正确';
-					mess.className='message right';
+					mess.className = 'message wrong';
+				} else {
+					mess.innerHTML = '输入正确';
+					mess.className = 'message right';
 				}
 			}
-			
-			
-			
-			
+
+
+
+
 			var img = document.querySelector("img");
 			var pp = document.querySelector("p");
 			var date = new Date();
