@@ -24,6 +24,25 @@
 				right: 0;
 				bottom: 0;
 			}
+			
+			#jiaoyan{
+				width: 600px;
+			}
+			.message{
+				display: inline-block;
+				font-size: 12px;
+				background: url(./images/mess.png) no-repeat left center;
+				padding-left: 20px;
+			}
+			
+			.wrong{
+				color: red;
+				background-image: url(images/wrong.png);
+			}
+			 .right{
+				 color: green;
+				 background-image: url(images/right.png);
+			 }
 		</style>
 	</head>
 	<body>
@@ -46,11 +65,37 @@
 			<input type="password" placeholder="普通输入框">
 		</div>
 
-<hr >
+		<hr>
 
 		<input id="hidden-input" type="text" src="" value="点击这个框就隐藏里面的内容" />
 
+		<hr>
+		<div id="jiaoyan">
+			 
+			<input type="text" name="" id="" value="" />
+			
+			<p class="message wrong">请输入6-16位数字</p>
+		</div>
+
+
 		<script type="text/javascript">
+			
+			var jiaoDiv = document.getElementById('jiaoyan');
+			var jInput = jiaoDiv.querySelector('input');
+			var mess = jiaoDiv.querySelector('p');
+			jInput.onblur = function(){
+				if(this.value.length<6||this.value.length>16){
+					mess.innerHTML = '请输入6-16位数字';
+					mess.className='message wrong';
+				}else{
+					mess.innerHTML='输入正确';
+					mess.className='message right';
+				}
+			}
+			
+			
+			
+			
 			var img = document.querySelector("img");
 			var pp = document.querySelector("p");
 			var date = new Date();
@@ -102,17 +147,17 @@
 					input.type = 'password';
 				}
 			};
-			
-			
+
+
 			var hiddenInput = document.getElementById('hidden-input');
-			 hiddenInput.onfocus = function(){
-				 this.value ="";
-			 }
-			 
-			 hiddenInput.onblur = function(){
-				 
-				  this.value ="手机号码";
-			 }
+			hiddenInput.onfocus = function() {
+				this.value = "";
+			}
+
+			hiddenInput.onblur = function() {
+
+				this.value = "手机号码";
+			}
 		</script>
 	</body>
 </html>
