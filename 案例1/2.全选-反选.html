@@ -47,8 +47,22 @@
 			</tbody>
 
 		</table>
+		
+		<div id="self_attr"></div>
 
 		<script type="text/javascript">
+			
+		 
+			// 自定义属性
+			var div = document.getElementById('self_attr');
+			
+			div.id = 'xxx';
+			div.className ='yyy';
+			// 设置新的属性
+			div.setAttribute('index',1);
+			
+			console.log(div.getAttribute('index'));
+			// ------------------------------------
 			var all = document.getElementById('all_check');
 			var allitem = document.querySelector('tbody').querySelectorAll('input');
 			all.onclick = function() {
@@ -60,6 +74,7 @@
 			}
 			
 			for (var i = 0; i < allitem.length; i++) { 
+				
 				allitem[i].onclick = function(){
 					let isAllcheck =true;
 					for (var i = 0; i < allitem.length; i++) {
