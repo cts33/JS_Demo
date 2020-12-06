@@ -21,7 +21,7 @@
 
 			</textarea>
 			<button type="button">发布</button>
-			
+			<button class="del" type="button">删除</button>
 			<ul>
 				
 			</ul>
@@ -30,7 +30,7 @@
 		<script type="text/javascript">
 			var btn = document.querySelector('button');
 			var text = document.querySelector('textarea');
-			
+			var del = document.querySelector('.del');
 			btn.onclick = function(){
 				var ul = document.querySelector('ul');
 				
@@ -38,6 +38,14 @@
 				li.innerHTML = text.value;
 				 
 				ul.insertBefore(li,ul.children[0]);
+			}
+			// 删除节点
+			del.onclick = function(){
+				
+				var ul = document.querySelector('ul');
+				if(ul.childElementCount>0){
+					ul.removeChild(ul.children[ul.childElementCount-1]);
+				}
 			}
 		</script>
 	</body>
