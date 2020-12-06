@@ -29,6 +29,7 @@
 
 				text-align: center;
 
+				width: 200px;
 				height: 39px;
 				padding: 0 20px;
 				color: black;
@@ -45,6 +46,7 @@
 				background-color: indianred;
 				color: white;
 			}
+
 			.item {
 				display: none;
 			}
@@ -91,22 +93,27 @@
 
 		<script type="text/javascript">
 			var li = document.querySelectorAll('li');
-			var content = document.querySelectorAll('.item');
+			var items = document.querySelectorAll('.item');
 			for (var i = 0; i < li.length; i++) {
+				li[i].setAttribute('index', i);
 				li[i].onclick = function() {
 
-					for (var i = 0; i < li.length; i++) {
-						li[i].className = '';
+					for (var y = 0; y < li.length; y++) {
+						li[y].className = '';
 					}
 					this.className = 'current';
 
-					for (var x = 0; x < content.length; x++) {
-						 
-						content[x].style.display = 'none';
+					// 把所有div 隐藏
+					for (var x = 0; x < items.length; x++) {
 
+						items[x].style.display = 'none';
 					}
-					console.log(i);
-					content[i].style.display = 'block';
+					var index = this.getAttribute('index');
+					console.log('index='+index);
+					 // 打印该对象的所有属性
+					console.dir(this.nextSibling.nextSibling);
+					// 设置当前选中item 对应的div 显示
+					items[index].style.display = 'block';
 
 
 				}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style type="text/css">
+			textarea {
+				width: 300px;
+				height: 200px;
+				border: 1px solid #333;
+				resize: none;
+				outline: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="input">
+			<textarea  >
+
+			</textarea>
+			<button type="button">发布</button>
+			
+			<ul>
+				
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			var btn = document.querySelector('button');
+			var text = document.querySelector('textarea');
+			
+			btn.onclick = function(){
+				var ul = document.querySelector('ul');
+				
+				var li = document.createElement('li');
+				li.innerHTML = text.value;
+				 
+				ul.insertBefore(li,ul.children[0]);
+			}
+		</script>
+	</body>
+</html>
