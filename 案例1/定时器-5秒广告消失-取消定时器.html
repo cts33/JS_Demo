@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<!-- 5秒消失广告 -->
+		<img src="images/ldh.jpg">
+
+		<script type="text/javascript">
+			var img = document.querySelector('img');
+			var timer = setTimeout(function() {
+
+				img.style.display = 'none';
+			}, 3000);
+			
+			
+			// 也可以清除定时器
+			// clearTimeout(timer);
+			
+			
+			// 定时器 setInterval 每次间隔多长时间执行
+			setInterval(function(){
+				console.log('--');
+			},2000)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			span {
+				width: 50px;
+				display: inline-block;
+				background-color: black;
+				text-align: center;
+				color: white;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="timer">
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+		</div>
+		
+		<script type="text/javascript">
+			var inputTime = + new Date('2020-12-09 20:00:00');
+		
+			
+			setInterval(function(){
+				var nowTime = +new Date();
+				
+				var hour = parseInt((inputTime-nowTime)/1000/60/60%24);
+				hour = hour<10 ? '0'+hour:hour;
+				var span = document.querySelectorAll('span');
+				span[0].innerHTML = hour;
+				
+				var min =parseInt( (inputTime-nowTime)/1000/60%60);
+				min = min<10 ? '0'+min:min;
+				span[1].innerHTML = min;
+				
+				var second =parseInt( (inputTime-nowTime)/1000%60);
+				second = second<10 ? '0'+second:second;
+				span[2].innerHTML = second;
+				
+				
+			},1000);
+			
+			
+			
+		</script>
+	</body>
+</html>
