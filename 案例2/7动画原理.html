@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#one{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background-color: palegoldenrod;
+			}
+			
+			#two{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background-color: darksalmon;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="one">
+
+		</div>
+		<div id="two">
+
+		</div>
+		<script type="text/javascript">
+			var one = document.querySelector("#one");
+			var two = document.querySelector("#two");
+
+
+			function animation(obj, target) {
+				// 定时器 每间隔时间 执行移动一定距离，记得终止移动
+				var timer = setInterval(function() {
+					if (obj.offsetLeft >= target) {
+						clearInterval(timer);
+					}
+					obj.style.left = obj.offsetLeft + 5 + 'px';
+				}, 30);
+			}
+
+			animation(one, 400);
+			animation(two,500);
+		</script>
+	</body>
+</html>

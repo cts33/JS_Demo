@@ -3,7 +3,61 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#one {
+				width: 100px;
+				height: 100px;
+				background-color: pink;
+				overflow: auto;
+				list-style: none;
+			}
+		</style>
 	</head>
+	<!-- scroll 滑动
+	 
+	 e.scrollTop 被滑动出去的顶部高度  无单位
+	 e.scrollLeft 滑动出去的左侧距离 无单位
+	 e.scrollWidth 自身实际宽度，不含边框 无单位
+	 e.scrollHeight 自身实际内容高度，不含边框 无单位
+	 
+	 
+	 页面滑动出去的字段
+	 window.pageYoffset 
+	 -->
 	<body>
+
+		<div id="one">
+			元素大致相同的方式来应用样式。你也可以任意方式为 <label> 应用样式，只是不要让文本难以阅读。
+
+				元素大致相同的方式来应用样式。你也可以任意方式为 <label> 应用样式，只是不要让文本难以阅读。
+
+					元素大致相同的方式来应用样式。你也可以任意方式为 <label> 应用样式，只是不要让文本难以阅读。
+
+						元素大致相同的方式来应用样式。你也可以任意方式为 <label> 应用样式，只是不要让文本难以阅读。
+
+							元素大致相同的方式来应用样式。你也可以任意方式为 <label> 应用样式，只是不要让文本难以阅读。
+
+								元素大致相同的方式来应用样式。你也可以任意方式为 <label> 应用样式，只是不要让文本难以阅读。
+
+
+		</div>
+		
+		<script type="text/javascript">
+			
+			var one = document.querySelector('#one');
+			
+			console.log(one.scrollHeight);
+			
+			console.log(one.scrollWidth);
+			// 滚动监听
+			one.addEventListener('scroll',function(e){
+				
+				console.log(this.scrollTop);
+			})
+		</script>
 	</body>
 </html>

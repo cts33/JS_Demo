@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<style type="text/css">
 			* {
 				margin: 0;
@@ -15,7 +16,7 @@
 
 			#nav {}
 
-			#nav li {
+			#nav>li {
 				float: left;
 				margin-left: 20px;
 
@@ -29,6 +30,8 @@
 
 			.item {
 				display: none;
+				background-color: pink;
+				border-bottom: 1px solid #ccc;
 			}
 		</style>
 	</head>
@@ -61,5 +64,27 @@
 				</ul>
 			</li>
 		</ul>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				// 鼠标经过，显示列表
+				$('#nav>li').mouseover(function(){
+					
+					console.log('xx');
+					$(this).children('ul').show();
+				})
+				// 鼠标离开，隐藏列表
+				$('#nav>li').mouseout(function(){
+					console.log(this);
+					
+					$(this).children('ul').hide();
+				})
+			})
+			
+			
+		</script>
 	</body>
+	
+	
 </html>
