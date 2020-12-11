@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#one{
+				width: 200px;
+				height: 100px;
+				padding: 10px;
+				margin-left: 10px;
+				border: 1px solid skyblue;
+				background-color: palegoldenrod;
+			}
+		</style>
+	</head>
+	<!-- client 获取元素数据 
+	e.clientLeft 获取左边框大小
+	e.clientTop 
+	e.clientWidth 返回自身宽度，包含padding 内容宽度，不含border
+	e.clientHeight 返回自身高度 ，包含padding 内容高度，不含border
+	
+	-->
+	
+	<body>
+		
+		<div id="one">
+			
+		</div>
+		
+		<script type="text/javascript">
+			var one = document.querySelector('#one');
+			
+			console.log(one.clientHeight);
+			console.log(one.clientLeft);
+			
+			console.log(one.clientTop);
+		</script>
+	</body>
+</html>
