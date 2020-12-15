@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			li{
+				float: left;
+				list-style: none;
+			}
+			.item{
+				display: block;
+				width: 50px;
+				height: 50px;
+				background-color: pink;
+				line-height: 50px;
+				text-align: center;
+				border-right: 1px solid #333;
+			}
+			
+			#content{
+				clear: both;
+			}
+			.curr{
+				background-color: purple;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div>
+			
+			<ul>
+				<li class="item curr">HHH</li>
+				<li class="item">HHH</li>
+				<li class="item">HHH</li>
+				<li class="item">HHH</li>
+				<li class="item">HHH</li>
+			</ul>
+		</div>
+		
+		<div id="content">
+			hhh
+		</div>
+		
+		<script type="text/javascript">
+			
+			$(function(){
+				
+				$('.item').click(function(){
+					$(this).addClass("curr").siblings().removeClass('curr');
+					var index = $(this).index();
+					
+					console.log(index);
+					
+					$('#content').html('---'+index);
+				});
+			})
+			
+		</script>
+	</body>
+</html>
