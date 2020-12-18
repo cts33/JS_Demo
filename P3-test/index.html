@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.w {
+				width: 1280px;
+				margin: 0 auto;
+			}
+
+			ul li {
+				list-style: none;
+			}
+
+			.header {
+
+				display: flex;
+				width: 800px;
+				height: 40px;
+
+				margin: 0 auto;
+
+			}
+
+			input {
+				border: red 1px solid;
+				height: 40px;
+				flex: 8;
+			}
+
+			.header a {
+				flex: 1;
+				width: 60px;
+				height: 40px;
+				background-color: red;
+				margin: 0;
+				line-height: 40px;
+				text-align: center;
+				color: white;
+				text-decoration: none;
+			}
+
+			.header a:nth-child(3) {
+				background-color: gray;
+			}
+
+			.tag {
+				background-color: darkgray;
+				margin: 5px auto;
+				height: 44px;
+				text-align: center;
+			}
+
+			.tag_curr {
+				background-color: dimgray;
+				border-radius: 10px;
+				color: white;
+				padding: 3px;
+			}
+
+			.tag .left_tag {
+				float: left;
+				margin-top: 5px;
+				margin-bottom: 5px;
+			}
+
+			.tag ul li {
+				float: left;
+				margin-right: 20px;
+
+			}
+
+			.tag .search {
+				float: right;
+				background-color: white;
+				border-radius: 10px;
+				margin: 5px 10px;
+			}
+
+			.search input {
+				outline：none;
+				border: 0px;
+			}
+
+			.search img {
+				background-size: 100%;
+
+
+			}
+
+			.tab {
+				display: flex;
+				clear: both;
+
+				height: 100px;
+
+			}
+
+			.xuan {
+				flex: 2;
+				background-color: #0000FF;
+
+			}
+
+			.x_item {
+				border: 1px solid lightgray;
+			}
+
+			.x_item img {
+				width: 100%;
+			}
+
+			.tab_2 {
+				flex: 8;
+
+
+			}
+
+			.content {
+				clear: both;
+			}
+
+			.tab_2 li {
+				float: left;
+				height: 50px;
+				background-color: white;
+				color: #333333;
+				text-decoration: none;
+				text-align: center;
+				line-height: 50px;
+				padding: 0 30px 0 30px;
+
+			}
+
+			.tab_2 .tab_curr {
+
+				background-color: red;
+				color: white;
+				text-decoration: none;
+
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="header">
+
+
+			<input type="search" class="sou" placeholder="11.11">
+
+			<a href="#">搜全店</a>
+			<a href="#">搜本店</a>
+		</div>
+
+		<div class="tag w">
+
+			<div class="left_tag">
+				<ul>
+					<li class="tag_curr">首页</li>
+					<li>iphone12</li>
+					<li>iphone13</li>
+					<li>iphone14</li>
+					<li>iphone11</li>
+				</ul>
+			</div>
+
+
+			<div class="search">
+				<input type="text" name="" id="" value="" />
+				<img src="img/1607043282(1).png">
+			</div>
+		</div>
+
+		<div class="tab w">
+
+
+			<div class="xuan">
+
+				<div class="x_item">
+					<img src="img/1607043133(1).png">
+					<h4>apple 苹果</h4>
+					<a href="#">￥8989</a>
+				</div>
+				<div class="x_item">
+					<img src="img/1607043133(1).png">
+					<h4>apple 苹果</h4>
+					<a href="#">￥8989</a>
+				</div>
+
+			</div>
+
+			<div class="tab_2">
+
+
+				<div class="tab_n">
+					<ul>
+						<li class="tab_curr">商品介绍</li>
+						<li>规格包装</li>
+						<li>售后保障</li>
+						<li>商品评价（100+）</li>
+						<li>手机社区</li>
+
+					</ul>
+				</div>
+				<div class="content" style="display: block;">
+
+
+					<span>商品介绍</span>
+
+
+
+				</div>
+
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			 
+			var sou = document.querySelector('.sou');
+			console.log(sou);
+			sou.addEventListener("focus", function() {
+
+				console.log(this);
+				this.placeholder = "";
+			});
+
+			sou.addEventListener("blur", function() {
+
+				this.placeholder = "11.11";
+			});
+
+			var yy = document.querySelector('.tab_n').querySelectorAll('li');
+
+			console.log(yy);
+			for (var i = 0; i < yy.length; i++) {
+				yy[i].setAttribute('index', i);
+				yy[i].onclick = function() {
+
+					for (var i = 0; i < yy.length; i++) {
+						yy[i].className = '';
+					}
+					this.className = 'tab_curr';
+					var index = this.getAttribute('index');
+
+					var span = document.querySelector('.content').querySelector('span');
+
+					console.log(this.innerHTML);
+					span.innerHTML = this.innerHTML;
+
+
+				}
+			}
+
+
+			var li = document.querySelector('.left_tag').querySelectorAll('li');
+
+			for (var i = 0; i < li.length; i++) {
+				li[i].setAttribute('index', i);
+
+				li[i].onclick = function() {
+					console.log(this);
+					for (var i = 0; i < li.length; i++) {
+						li[i].className = '';
+					}
+
+					this.className = 'tag_curr';
+				}
+			}
+		</script>
+	</body>
+</html>
