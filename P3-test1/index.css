@@ -1,0 +1,192 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.w {
+	width: 1070px;
+	margin: 0 auto;
+}
+
+.header {
+	width: 100%;
+	height: 50px;
+	background-color: pink;
+}
+
+.header .user {
+	margin-left: 40px;
+	display: inline-block;
+	float: left;
+	width: 100px;
+	height: 100%;
+}
+
+.header img {
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+}
+
+.header .search {
+	float: left;
+	height: 100%;
+	margin-left: 100px;
+}
+
+.header .search .search_input {
+	width: 400px;
+	float: left;
+	height: 50px;
+	padding-left: 5px;
+	outline: none;
+	line-height: 100%;
+	border: 0;
+}
+
+.local,
+.all {
+	width: 70px;
+	height: 50px;
+	background-color: gray;
+	color: white;
+	border: 0;
+	margin: 0;
+	margin-top: -10px;
+	padding-left: 0.625rem;
+	padding-right: 0.625rem;
+}
+
+.search img {
+	width: 200px;
+	height: 100%;
+}
+
+.box {
+	height: 200px;
+	clear: both;
+}
+
+.left {
+	float: left;
+	display: inline-block;
+	width: 30%;
+	height: 100%;
+}
+
+.left img {
+	width: 100%;
+	background-size: auto;
+	margin: 20px;
+}
+
+.content {
+	display: inline-block;
+	float: left;
+	width: 60%;
+	height: 100%;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+
+h4 {
+	font-size: 28px;
+	color: gray;
+	text-align: center;
+}
+
+#price {
+	padding: 10px;
+	background-color: lightgray;
+}
+
+#price h6 {
+	margin-bottom: 10px;
+	color: gray;
+	text-decoration: line-through;
+}
+
+#price h6::before {
+	margin-bottom: 10px;
+	text-decoration: none;
+	content: "价格：";
+}
+
+#price h3 {
+	color: red;
+
+}
+
+#price h3::before {
+	content: '促销价：';
+	color: gray;
+}
+
+.color a {
+	border: 1px solid gray;
+	padding: 5px;
+	color: #333;
+	text-decoration: none;
+}
+
+.size a {
+	border: 1px solid gray;
+	padding: 5px 8px 5px 8px;
+	color: #333;
+	text-decoration: none;
+}
+
+.num a {
+	border: 1px solid gray;
+	padding: 5px 8px 5px 8px;
+	color: #333;
+	text-decoration: none;
+}
+
+.buy button:nth-child(1) {
+	width: 100px;
+	height: 44px;
+	background-color: red;
+	color: white;
+	border: 0;
+}
+
+.buy button:nth-child(2) {
+	width: 100px;
+	height: 44px;
+	background-color: white;
+	color: black;
+	border: 1px solid gray;
+}
+
+.service ul li {
+	font-size: 10px;
+	background-size: 0.5rem;
+	float: left;
+	list-style: square inside url('img/1607046731(1).png');
+	/* list-style-image: url(img/1607046731(1).png); */
+}
+
+.fix{
+	position: fixed;
+	right: 10px;
+	top: 100px;
+	
+	width: 30px;
+	background-color: black;
+	
+}
+.fix li{
+	color: white;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 50px;
+}
+.fix li:hover{
+	
+	background-color: red;
+}
+
