@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				border-left: 1px solid orange;
+				border-right: 1px solid orange;
+			}
+			li{
+				list-style: none;
+				width:58px;
+				height: 30px;
+				border-bottom: 1px solid orange;
+				line-height: 30px;
+				text-align: center;
+			}
+			.box{
+				margin: 0 auto;
+				width: 60px;
+				height: 40px;
+			}
+			p{
+				display: inline-block;
+				width: 58px;
+				height: 30px;
+				border: 1px solid darkgray;
+				text-align: center;
+				font-size: 14px;
+				line-height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<p>微博</p>
+			<ul style="display: none;">
+				<li>AAA</li>
+				<li>BBB</li>
+				<li>CCC</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			var pp = document.querySelector('p');
+			var ul = document.querySelector('ul');
+			pp.onmouseover = function(){
+				
+				ul.style.display = 'block';
+				
+			}
+			pp.onmouseout = function(){
+				
+				ul.style.display = 'none';
+			}
+		</script>
+	</body>
+</html>
