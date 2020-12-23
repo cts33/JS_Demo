@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			
+			.xx{
+				
+				color: red;
+				border: 1px solid red;
+			}
+			
+			.normal{
+				color: black;
+				border: 1px solid black;
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<button>按钮1</button>
+		<button>按钮2</button>
+		<button>按钮3</button>
+		<button>按钮4</button>
+		<button>按钮5</button>
+		
+		<script type="text/javascript">
+			
+			
+			var btns = document.querySelectorAll('button');
+			
+			for (var i = 0; i < btns.length; i++) {
+				btns[i].onclick = function(){
+					
+					console.log(this);
+					for (var i = 0; i < btns.length; i++) {
+						btns[i].className = '';
+					}
+					
+					this.className = 'xx';
+				}
+			}
+			
+		</script>
+	</body>
+</html>

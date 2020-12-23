@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="add">
+			<textarea rows="3" cols="5">
+				
+			</textarea>
+			<button type="button">留言</button>
+			
+			<ul class="list">
+				
+			</ul>
+			
+		</div>
+		
+		<script type="text/javascript">
+			var btn = document.querySelector('button');
+			
+			btn.onclick = function(){
+				
+				var text = document.querySelector('textarea');
+				var ul = document.querySelector('ul');
+				
+			 
+				var li = document.createElement('li');
+				li.innerHTML = text.value;
+				
+				ul.appendChild(li);
+				
+			}
+			
+		</script>
+	</body>
+</html>
