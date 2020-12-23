@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.name {
+				position: relative;
+				width: 200px;
+				height: 44px;
+				background-color: pink;
+			}
+
+			input {
+				height: 100%;
+				width: 100%;
+				border: 0;
+				border-bottom: 1px solid #D3D3D3;
+			}
+
+			.name img {
+				position: absolute;
+				right: 0.625rem;
+				width: 20px;
+				top: 50%;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="name">
+
+			<input type="text" name="" id="" value="" />
+
+			<img src="img/close.png">
+		</div>
+		
+		<script type="text/javascript">
+			var img = document.querySelector('img');
+			var edit = document.querySelector('input');
+			img.onclick = function(){
+				
+				if(edit.value===''){
+					return;
+				}
+				
+				if(edit.type==='text'){
+					edit.type='password';
+					this.src = 'img/close.png';
+					
+				}else{
+					edit.type='text';
+					this.src = 'img/open.png';
+					
+				
+				}
+				
+			}
+		</script>
+	</body>
+</html>
