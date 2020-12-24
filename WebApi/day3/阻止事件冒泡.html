@@ -14,7 +14,8 @@
 			// 给son注册单击事件
 			son.addEventListener('click', function(e) {
 				alert('son');
-				e.stopPropagation(); // stop 停止  Propagation 传播
+				
+				e.stopPropagation()// 停止向上传播
 				window.event.cancelBubble = true; // 非标准 cancel 取消 bubble 泡泡
 			}, false);
 

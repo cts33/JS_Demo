@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 按键的监听 -->
+		<script type="text/javascript">
+			document.addEventListener('keydown',function(e){
+				
+				console.log('donw'+e);
+				console.log(e.key);
+			})
+			document.addEventListener('keypress',function(){
+				
+				console.log('onkeypress');
+			})
+			
+			document.addEventListener('keyup',function(){
+				
+				console.log('onkeyup');
+			})
+			
+		</script>
+	</body>
+</html>
