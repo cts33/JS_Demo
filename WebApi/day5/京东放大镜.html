@@ -33,6 +33,7 @@
 				left: 0;
 				background-color: orange;
 				opacity: 0.5;
+				cursor: move;
 			}
 
 			.content {
@@ -58,11 +59,17 @@
 			
 			var box = document.querySelector('.box');
 			var mask = document.querySelector('.mask');
+			var maskJL = box.clientWidth-mask.clientWidth;
+			
 			box.addEventListener('mousemove', function(e) {
 				console.log(e.pageX + "-" + e.pageY);
+				var x = e.pageX-box.offsetLeft;
+				var y = e.pageY-box.offsetLeft;
 				
-				mask.style.left = e.pageX-box.offsetLeft+'px';
-				mask.style.top = e.pageY-box.offsetTop+'px';
+				mask.style.left = x-mask.offsetWidth/2+'px';
+				mask.style.top = y-mask.offsetHeight/2+'px';
+				
+				
 			})
 			
 		</script>
