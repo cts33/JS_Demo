@@ -59,17 +59,30 @@
 			
 			var box = document.querySelector('.box');
 			var mask = document.querySelector('.mask');
-			var maskJL = box.clientWidth-mask.clientWidth;
+			
 			
 			box.addEventListener('mousemove', function(e) {
 				console.log(e.pageX + "-" + e.pageY);
+				// 鼠标的坐标 减去 盒子距离左边屏幕的距离 = 鼠标在盒子里的坐标，不带px
 				var x = e.pageX-box.offsetLeft;
-				var y = e.pageY-box.offsetLeft;
+				var y = e.pageY-box.offsetTop;
 				
-				mask.style.left = x-mask.offsetWidth/2+'px';
-				mask.style.top = y-mask.offsetHeight/2+'px';
+				// 遮挡层在盒子里可移动的距离
+				// 大盒子宽度  减去遮挡层的宽度 = 可移动的空间差
+				var maskMax = box.clientWidth-mask.clientWidth;
+				
+				if(maskMax<=0){
+						maskMax =0;
+				}else if(maskMax>=){
+					
+				}
 				
 				
+				// mask.style.left = x-mask.offsetWidth/2+'px';				
+				mask.style.left = x -mask.offsetWidth/2+'px';
+				mask.style.top = y -mask.offsetHeight/2 +'px';
+				
+				console.log(mask.style.left);
 			})
 			
 		</script>
