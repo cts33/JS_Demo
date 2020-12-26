@@ -32,6 +32,7 @@
 				top: 0;
 				left: 0;
 				background-color: orange;
+				/* 透明度 */
 				opacity: 0.5;
 				cursor: move;
 			}
@@ -46,7 +47,8 @@
 				background-color: pink;
 				z-index: 999;
 				border: 1px solid #ccc;
-				overflow: hidden;
+				/* 超出父类部分隐藏 */
+				overflow: hidden;	
 			}
 
 			.big img {
@@ -94,7 +96,7 @@
 
 			// 鼠标移动
 			box.addEventListener('mousemove', function(e) {
-				console.log(e.pageX + "-" + e.pageY);
+				// console.log(e.pageX + "-" + e.pageY);
 
 				// 获取鼠标在盒子里的坐标 减去 蒙层的半径距离
 				var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
@@ -126,6 +128,8 @@
 				// 大图片的移动距离 X Y
 				var bigX = x * bigMax / maxX;
 				var bigY = y * bigMax / maxY;
+				
+				console.log('=='+bigX);
 				bigIMg.style.left = -bigX + 'px';
 				bigIMg.style.top = -bigY + 'px';
 			})
