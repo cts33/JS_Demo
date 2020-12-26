@@ -36,10 +36,23 @@
 				cursor: move;
 			}
 
-			.content {
-				position: absolute;
+			.big {
 				display: none;
+				position: absolute;
+				left: 410px;
+				top: 0;
 				width: 500px;
+				height: 500px;
+				background-color: pink;
+				z-index: 999;
+				border: 1px solid #ccc;
+				overflow: hidden;
+			}
+
+			.big img {
+				position: absolute;
+				top: 0;
+				left: 0;
 			}
 		</style>
 	</head>
@@ -50,28 +63,72 @@
 			<div class="mask">
 
 			</div>
-			<div class="content">
-				<img src="img/big.jpg">
+			<div class="big">
+				<img src="img/big.jpg" alt="" class="bigImg">
 			</div>
 		</div>
 
 		<script type="text/javascript">
-			
 			var box = document.querySelector('.box');
 			var mask = document.querySelector('.mask');
-			var maskJL = box.clientWidth-mask.clientWidth;
-			
+			var big = document.querySelector('.big');
+
+			console.log('display=' + box.style.display);
+
+			// 鼠标经过
+			box.addEventListener('mouseover', function() {
+
+				mask.style.display = 'block';
+				big.style.display = 'block';
+
+			})
+
+			// 鼠标移除
+			box.addEventListener('mouseout', function() {
+
+				mask.style.display = 'none';
+				big.style.display = 'none';
+
+
+			})
+
+			// 鼠标移动
 			box.addEventListener('mousemove', function(e) {
 				console.log(e.pageX + "-" + e.pageY);
-				var x = e.pageX-box.offsetLeft;
-				var y = e.pageY-box.offsetLeft;
-				
-				mask.style.left = x-mask.offsetWidth/2+'px';
-				mask.style.top = y-mask.offsetHeight/2+'px';
-				
-				
+
+				// 获取鼠标在盒子里的坐标 减去 蒙层的半径距离
+				var x = e.pageX - box.offsetLeft - mask.offsetWidth / 2;
+				var y = e.pageY - box.offsetTop - mask.offsetHeight / 2;
+				// 蒙层 最大移动距离
+				var maxX = box.clientWidth - mask.clientWidth;
+				var maxY = box.clientHeight - mask.clientHeight;
+				if (x <= 0) {
+					x = 0;
+				} else if (x > maxX) {
+					x = maxX;
+				}
+
+				if (y <= 0) {
+					y = 0;
+				} else if (y > maxY) {
+					y = maxY;
+				}
+
+
+				mask.style.left = x + 'px';
+				mask.style.top = y + 'px';
+
+				// 3. 大图片的移动距离 = 遮挡层移动距离 * 大图片最大移动距离 / 遮挡层的最大移动距离
+				// 大图
+				var bigIMg = document.querySelector('.big img');
+				// 大图片最大移动距离
+				var bigMax = bigIMg.offsetWidth - big.offsetWidth;
+				// 大图片的移动距离 X Y
+				var bigX = x * bigMax / maxX;
+				var bigY = y * bigMax / maxY;
+				bigIMg.style.left = -bigX + 'px';
+				bigIMg.style.top = -bigY + 'px';
 			})
-			
 		</script>
 
 	</body>
