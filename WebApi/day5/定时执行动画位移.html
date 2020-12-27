@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			div{
+				position: absolute;
+				background-color: pink;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			
+		</div>
+		<script type="text/javascript">
+			var box = document.querySelector('div');
+			animtor(box,500);
+			
+			
+			
+			// 动画函数封装,obj 执行动画的控件，target 动画结束的结束值
+			
+			function animtor(obj,target){
+				
+				// clearInterval(timer);
+				var timer = setInterval(function(){
+				 	
+					var step = (target - obj.offsetLeft)/10;
+					console.log(step);
+					// if(obj.offsetLeft=target){
+					// 	clearInterval(timer);
+					// }
+					
+					
+					obj.style.left = obj.offsetLeft+step+'px';
+					
+				},100);
+			
+			}
+			
+			// 减速的动画效果
+			
+			 
+		</script>
+	</body>
+</html>
