@@ -5,48 +5,49 @@
 		<title></title>
 		
 		<style type="text/css">
-			div{
+			
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
 				position: absolute;
 				background-color: pink;
 				width: 100px;
 				height: 100px;
 			}
 		</style>
+		
+		<script src="animator.js" type="text/javascript">
+			
+		</script>
 	</head>
 	<body>
+	
+		<div  >
+			<button type="button">点击执行动画</button>
+			
+		</div>
 		
 		<div id="box">
 			
 		</div>
+	
 		<script type="text/javascript">
-			var box = document.querySelector('div');
-			animtor(box,500);
-			
-			
+			var box = document.querySelector('#box');
+			var btn = document.querySelector('button');
+			btn.onclick = function(){
+				animtor(box,500,function(){
+					
+					alert('hello js!');
+				});
+			}
+	
 			
 			// 动画函数封装,obj 执行动画的控件，target 动画结束的结束值
 			
-			function animtor(obj,target){
-				
-				// clearInterval(timer);
-				var timer = setInterval(function(){
-				 	
-					var step = (target - obj.offsetLeft)/10;
-					console.log(step);
-					// if(obj.offsetLeft=target){
-					// 	clearInterval(timer);
-					// }
-					
-					
-					obj.style.left = obj.offsetLeft+step+'px';
-					
-				},100);
-			
-			}
 			
 			// 减速的动画效果
-			
-			 
 		</script>
 	</body>
 </html>
