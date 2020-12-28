@@ -1,0 +1,64 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.w {
+	margin: 0 auto;
+}
+
+li {
+	list-style: none;
+	float: left;
+}
+
+.arrow-l,
+.arrow-r {
+	position: absolute;
+	/* 上层显示 */
+	z-index: 2;
+}
+
+.arrow-l {
+	left: 0;
+	top: 50%;
+	margin-left: 10px;
+}
+
+.arrow-r {
+	right: 0;
+	top: 50%;
+	margin-right: 10px;
+}
+
+.focus {
+	width: 721px;
+	height: 455px;
+	position: relative;
+	background-color: pink;
+	/* overflow: hidden; */
+}
+
+.focus ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 600%;
+}
+
+.circle {
+	position: absolute;
+	left: 1.875rem;
+	bottom: 50px;
+
+}
+
+.circle li {
+	margin: 0 3px;
+	border-radius: 50%;
+	color: white;
+	float: left;
+	width: 8px;
+	height: 8px;
+	border: 0.125rem solid rgba(255, 255, 255, .5);
+}
