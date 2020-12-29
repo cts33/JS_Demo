@@ -9,7 +9,7 @@
 
 li {
 	list-style: none;
-	float: left;
+	 
 }
 
 .arrow-l,
@@ -36,7 +36,7 @@ li {
 	height: 455px;
 	position: relative;
 	background-color: pink;
-	/* overflow: hidden; */
+	 overflow: hidden; 
 }
 
 .focus ul {
@@ -45,11 +45,17 @@ li {
 	left: 0;
 	width: 600%;
 }
+.focus ul li{
+	
+	float: left;
+}
 
 .circle {
 	position: absolute;
 	left: 1.875rem;
 	bottom: 50px;
+	 
+	/* background-color: yellow; */
 
 }
 
@@ -61,4 +67,8 @@ li {
 	width: 8px;
 	height: 8px;
 	border: 0.125rem solid rgba(255, 255, 255, .5);
+}
+
+.current {
+	background-color: white;
 }
