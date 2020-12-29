@@ -32,8 +32,14 @@ window.addEventListener('DOMContentLoaded', function() {
 		var li = document.createElement('li');
 		li.setAttribute('index', i);
 		li.addEventListener('click', function() {
-			// console.log('圆点-'+i);
-
+			var index = this.getAttribute('index');	
+			console.log('圆点-'+index);
+			
+			circle = index;
+			num = index;
+			
+			circleChange()
+			animation();
 		})
 
 		ol.appendChild(li);
