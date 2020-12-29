@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+		<style type="text/css">
+			.head{
+				height: 100px;
+				background-color: skyblue;
+			}
+			.banner{
+				height: 200px;
+				background-color: pink;
+			}
+			
+			.content{
+				height: 866px;
+				background-color: gray;
+			}
+			.slide{
+				position: absolute;
+				left: 50%;
+				top:200px;
+				margin-left: 600px;
+				width: 50px;
+				height: 100px;
+				background-color: gray;
+			}
+			.w{
+				width: 1200px;
+				margin: 0 auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="head w"></div>
+		<div class="banner w">
+			
+		</div>
+		<div class="content w"></div>
+		
+		<div class="slide"></div>
+		
+		<script type="text/javascript">
+			
+			
+			var banner = document.querySelector('.banner');
+			var slide = document.querySelector('.slide');
+			//记录初始化顶部的距离
+			var xx = slide.offsetTop;
+			
+			var ss = xx-banner.offsetTop;
+			document.addEventListener('scroll',function(){
+				
+				if(window.pageYOffset>=banner.offsetTop){
+					console.log('ss'+ss);
+					
+					slide.style.position = 'fixed';
+					slide.style.top  = ss+'px';
+				}else{
+					// var dd = window.pageYOffset-banner.offsetTop;
+					slide.style.position = 'absolute';
+					slide.style.top  = xx+'px';
+					
+					console.log('xx'+xx);
+				}
+				
+			})
+			
+		</script>
+	</body>
+</html>
