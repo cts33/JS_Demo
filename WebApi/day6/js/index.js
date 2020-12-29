@@ -12,12 +12,17 @@ window.addEventListener('DOMContentLoaded', function() {
 
 		arrowl.style.display = 'block';
 		arrowr.style.display = 'block';
+		clearInterval(timer);
+		timer = null;
 	})
 
 	focus.addEventListener('mouseleave', function() {
 
 		arrowl.style.display = 'none';
 		arrowr.style.display = 'none';
+		timer = setInterval(function() {
+			arrowr.click();
+		}, 2000);
 
 	})
 	//总个数
@@ -85,9 +90,13 @@ window.addEventListener('DOMContentLoaded', function() {
 			}
 			circleChange();
 		}
-
-
 	})
+
+	var timer = setInterval(function() {
+
+		arrowr.click();
+
+	}, 2000);
 
 	var flag = true;
 
