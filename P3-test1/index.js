@@ -56,24 +56,30 @@ for (var i = 0; i < ss.length; i++) {
 var num = document.querySelector('.num')
 var jian = num.querySelector('.jian');
 var jia = num.querySelector('.jia');
-
+var totalPrice = num.querySelector('.total_price');
+var index;
 jian.addEventListener('click', function() {
 	var shuliang = num.querySelector('.shuliang');
-	var index = parseInt(shuliang.innerHTML);
+	index = parseInt(shuliang.innerHTML);
 	if (index > 1) {
-		index--;
-		shuliang.innerHTML = index+'';
+		index = index - 1;;
+		shuliang.innerHTML = index;
 	}
 	if (index == 1) {
 		shuliang.disabled = true;
 	}
+	var price =  (Number(index * 89.00).toFixed(2));
+	totalPrice.innerHTML = '总金额：' + price + ''
 });
 
 jia.addEventListener('click', function() {
 
 	var shuliang = num.querySelector('.shuliang');
 
-	var index = parseInt(shuliang.innerHTML);
+	index = parseInt(shuliang.innerHTML);
 	index++;
-	shuliang.innerHTML= index+'';
+	shuliang.innerHTML = index + '';
+
+	var price = Number(index * 89.00).toFixed(2);
+	totalPrice.innerHTML = '总金额：' + price + ''
 });

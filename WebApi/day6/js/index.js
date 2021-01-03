@@ -10,9 +10,11 @@ window.addEventListener('DOMContentLoaded', function() {
 	//大盒子 鼠标经过
 	focus.addEventListener('mouseenter', function() {
 
+
 		arrowl.style.display = 'block';
 		arrowr.style.display = 'block';
 		clearInterval(timer);
+		console.log('鼠标经过！')
 		timer = null;
 	})
 

@@ -1,0 +1,100 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.w {
+	width: 1000px;
+	margin: 0 auto;
+}
+.header{
+	display: flex;
+	border-bottom: 2px solid gray;
+}
+.header h2{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.add{
+	display: flex;
+	justify-content: space-between;
+}
+.stateWrap,
+.genderWrap,
+.status,
+.stateWrap{
+	width: 44px;
+	border: 1px solid gray;
+	text-align: center;
+	padding: 1px;
+}
+.stateWrap {
+	width: 88px;
+}
+.genderIco,
+.stateIco {
+	width: 22px;
+	height: 22px;
+	background: #666;
+	overflow: hidden;
+	transition: .3s;
+}
+.gender,
+.state {
+	display: none;
+}
+
+.stateIco {
+	width: 44px;
+}
+.name,
+.age,
+.sex,
+.status,
+.submit {
+	width: 80px;
+	text-align: center;
+	height: 24px;
+	padding: 0;
+	border: 1px solid #CCC;
+}
+
+.gender:checked ~ .genderIco {
+	margin-left: 22px;
+}
+.gender:checked ~ .genderIco .genderInner{
+	margin-left: -22px;
+}
+.state:checked ~ .stateIco {
+	margin-left: 44px;
+}
+.state:checked ~ .stateIco .stateInner{
+	margin-left: -44px;
+}
+
+.nav{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 2px solid gray;
+}
+
+.list{
+	
+	border-bottom: 1px solid gray;
+}
+.list li {
+	display: flex;
+	justify-content: space-between;
+	
+}
+.operate{
+	display: flex;
+	justify-content: space-around;
+}
