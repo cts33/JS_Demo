@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #000000;
+}
+
+li {
+	list-style: none;
+}
+
+.box {
+	width: 630px;
+	height: 394px;
+	margin: 100px auto;
+	padding: 10px 0 0 10px;
+	border: 1px solid #fff;
+}
+
+ul li {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+ul li img{
+	display: block;
+	border: 0;
+}

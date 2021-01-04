@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
-		<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		
 		<style type="text/css">
 			li{
@@ -23,7 +23,7 @@
 		
 		<script type="text/javascript">
 			$(function(){
-				$('li:eq(0)').css("color",'red').siblings('li').css("color",'black');
+				$('li:eq(0)').css("color",'red').siblings().css("color",'black');
 				
 			})
 		</script>
