@@ -16,6 +16,26 @@
 			ldh = new Name();
 
 			console.log(ldh);
+			
+			//  function Star(uname, age) {
+			//      this.uname = uname;
+			//      this.age = age;
+			//      this.sing = function() {
+			//      console.log('我会唱歌');
+			//     }
+			// }
+			// var ldh = new Star('刘德华', 18);
+			// console.log(ldh.sing());//实例成员只能通过实例化的对象来访问
+			
+			function Star(uname, age) {
+			    this.uname = uname;
+			    this.age = age;
+			}	
+			Star.prototype.sing = function(){
+				console.log('sing');
+			}
+			
+			new Star('刘德华',18).sing();
 		</script>
 	</body>
 </html>
