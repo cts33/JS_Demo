@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.box {
+	width: 852px;
+	margin: 100px auto;
+	overflow: hidden;
+	padding: 10px;
+	background: url(./images/bg.png) no-repeat;
+} 
+ul li {
+	float: left;
+	position: relative;
+	width: 69px;
+	height: 69px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+ul li img {
+	display: block;
+	border: 0;
+}
+ 
+.big {
+	position: absolute;
+	display: none;
+	height: 69px;
+}
+
+.current .big {
+	width: 224px;
+	display: none;
+}
+
+.small {
+	left: 0;
+	top: 0;
+	position: absolute;
+	width: 69px;
+	height: 69px;
+	border-radius: 5px;
+}
+
+.current .small {
+	width: 69px;
+	display: block;
+}
