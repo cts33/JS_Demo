@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				list-style: none;
+			}
+
+			.box {
+				position: relative;
+				width: 800px;
+				height: 400px;
+				margin: 0 auto;
+				border: 1px solid gray;
+			}
+			.nav{
+				position: relative;
+			}
+
+			.tabitem {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 50px;
+			}
+
+			.tabitem li {
+				float: left;
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				border-right: 1px solid #ccc;
+				position: relative;
+			}
+
+			.add {
+				width: 20px;
+				height: 20px;
+				position: absolute;
+				top: 0;
+				right: 0;
+				text-align: center;
+				vertical-align: middle;
+				border: 1px solid gray;
+			}
+
+			.content {
+				position: absolute;
+				top: 150;
+				left: 0;
+				height: 300px;
+				width: 100%;
+				border: 0.0625rem solid skyblue;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="box">
+			<div class="nav">
+
+				<ul class="tabitem">
+					<li>tab1</li>
+					<li>tab2</li>
+					<li>tab3</li>
+					<li style="clear: both;"></li>
+				</ul>
+				<div class="add">+</div>
+			</div>
+			<div class="content">
+				<section>one</section>
+				<section>two</section>
+				<section>three</section>
+			</div>
+		</div>
+	</body>
+</html>

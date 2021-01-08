@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+		<div>点击</div>
+		<script type="text/javascript">
+			class Father {
+				constructor(x, y) {
+					this.x = x;
+					this.y = y;
+
+				}
+				sum() {
+					console.log('father sum=' + (this.x + this.y));
+				}
+			}
+			class Son extends Father {
+				constructor(x, y) {
+					//提前调用super,super也可以直接调用方法，eg：super.sum();
+					super(x,y);
+					// this.x = x;
+					// this.y = y;
+
+				}
+
+				sum() {
+					console.log('son  sum=' + (parseInt(this.x) + parseInt(this.y)));
+				}
+			}
+
+			var son = new Son(5,7);
+			son.sum();
+		</script>
+	</body>
+</html>
