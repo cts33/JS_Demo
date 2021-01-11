@@ -27,6 +27,7 @@ class Tab {
 			this.lis[i].onclick = this.toggleTab;
 			this.remove[i].onclick = this.removeTab;
 			this.spans[i].ondblclick = this.editTab;
+			this.sections[i].ondblclick = this.editTab;
 		}
 		this.add.onclick = this.addTab;
 	}
