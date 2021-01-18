@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+
+
+
+		<script type="text/javascript">
+			function P(name, age) {
+
+
+				this.age = age;
+				this.name = name;
+			 
+			}
+			
+			P.prototype.sing = function(){
+				
+				console.log('sing');
+				return 'this is method';
+				
+			}
+			var pp = new P("lisi", 12);
+			P.xx = 45;
+			console.log(pp);
+			//静态成员
+			console.log(P.xx);
+			
+			console.log(pp.sing());
+			
+		</script>
+	</body>
+</html>

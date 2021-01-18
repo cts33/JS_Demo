@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			// 构造函数原型 
+			
+			function Star(name){
+				this.name = name;
+			}
+			//原型对象主要用来共享方法
+			// Star.prototype.sing = function(){
+			// 	console.log('sing');
+			// }
+			
+			// 如果我们修改原来的原型对象，给原型对象赋值的是个对象，则必须手动
+			//用  constructor 指向原来的构造函数
+			Star.prototype = {
+				constructor:Star,
+				sing:function(){
+					
+					console.log('sing');
+				},
+				movie:function(){
+					console.log('movie');
+				}
+			}
+			var s = new Star("lidehua");
+			var ss = new Star("lili");
+			// console.log(s);
+			// console.log(ss.sing());
+			// console.log(s.sing());
+				
+			
+			// console.log('原型对象和对象原型'+(ss.__proto__===Star.prototype))
+			console.log( ss.__proto__.constructor);
+			console.log( Star.prototype.constructor);
+		</script>
+	</body>
+</html>
