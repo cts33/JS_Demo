@@ -104,6 +104,20 @@
 				})
 				console.log(newData);
 			}
+			
+			 
+			search_pro.onclick = function(){
+				tbody.innerHTML ='';
+				var newData = data.filter(function(value){
+					return value.pname===product.value;
+				})
+				newData.forEach(function(value){
+					var tr = document.createElement('tr');
+					tr.innerHTML ='<td>'+value.id+'</td><td>'+value.pname+'</td><td>'+value.price+'</td>';
+					
+					tbody.appendChild(tr);
+				})
+			}
 		</script>
 	</body>
 </html>
