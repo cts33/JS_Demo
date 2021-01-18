@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+		每个构造函数都有一个原型对象prototype
+		
+		prototype
+		
+		Star.prototype ------》  
+		 
+		 
+		 
+		 -->
+		
+		<script type="text/javascript">
+			function Star(name){
+				this.name = name;
+				// this.sing = function(){
+				// 	console.log('singing');
+				// }
+			}
+			//原型对象
+			Star.prototype.sing = function(){
+				
+				console.log('singing');
+			}
+			var star = new Star('lisi');
+			var star1 = new Star('lisan');
+			// console.log(star.sing ===star1.sing)
+			 console.log(Star.prototype===star.__proto__);
+			 
+			 
+			 // console.log(star.__proto__);
+			
+		</script>
+	</body>
+</html>
