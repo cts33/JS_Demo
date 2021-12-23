@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script type="text/javascript">
+			
+			
+			function fn(a,b,callback){
+				console.log(a+b);
+				callback&&callback();
+			}
+			
+			fn(3,4,function(){
+				
+				console.log('last deal!')
+			});
+			
+			
+			var age = 100;
+			
+			var obj = {
+				age: 20,
+				say: () => {
+					alert(this.age)
+				}
+			}
+			//箭头函数this指向的是被声明的作用域里面，
+			//而对象没有作用域的，所以箭头函数虽然在对象中被定义，但是this指向的是全局作用域
+			obj.say();
+		</script>
+	</body>
+</html>

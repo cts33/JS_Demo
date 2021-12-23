@@ -1,0 +1,479 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #F1F1F1;
+	 
+	min-width: 320px;
+	max-width: 40rem;
+	margin: 0 auto ;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	 
+}
+
+.header .top_item {
+
+	display: inline-block;
+	width: 20%;
+	margin: 10px;
+	text-decoration: none;
+	color: #333;
+}
+.header .top_item img {
+	width: 50px;
+	height: 50px;
+}
+.header .top_item span {
+	margin-top: 10px;
+	text-decoration: none;
+}
+
+.banner img {
+	width: 100%;
+}
+
+.xueguan {
+	display: flex;
+	width: 95%;
+	height: 140px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.xueguan .xueguan_l {
+	display: block;
+	width: 33%;
+	background-color: orange;
+	border-radius: 0.625rem;
+	height: 140px;
+
+}
+
+.xueguan .xueguan_l a {
+	display: block;
+	text-align: center;
+	padding: auto;
+	line-height: 140px;
+	font-size: 19px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+
+/* 中部 */
+.xueguan .xueguan_c {
+	width: 33%;
+	display: block;
+	height: 140px;
+}
+
+.xueguan .xueguan_c a {
+	display: block;
+	height: 45%;
+	width: 90%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+
+	margin-left: 10px;
+
+
+}
+
+.xueguan .xueguan_c a:nth-child(2) {
+	margin-top: 10px;
+
+}
+
+.xueguan .xueguan_c a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.xueguan .xueguan_c a span {
+
+	margin-top: 5px;
+}
+
+.xueguan .xueguan_r {
+	width: 33%;
+	display: block;
+	height: 140px;
+}
+/* 右边 */
+.xueguan .xueguan_r a {
+	display: block;
+	height: 45%;
+	width: 100%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	margin-left: 10px;
+	border-radius: 5px;
+	background-color: #FFFFFF
+}
+
+.xueguan .xueguan_r a:nth-child(2) {
+	margin-top: 10px;
+}
+
+.xueguan .xueguan_r a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.xueguan .xueguan_r a span {
+
+	margin-top: 5px;
+}
+
+
+/*---------------------------------------------------------------------- 宿舍 */
+.shushe   {
+	display: flex;
+	width: 95%;
+	height: 70px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	 
+}
+.shushe .shushe_l {
+	display: block;
+	width: 33%;
+	background-color: palevioletred;
+	border-radius: 0.625rem;
+	height: 70px;
+
+}
+
+.shushe .shushe_l a {
+	display: block;
+	text-align: center;
+	padding: auto;
+	line-height: 70px;
+	font-size: 19px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+
+
+/* 中部 */
+.shushe .shushe_c {
+	width: 33%;
+	display: block;
+	height: 70px;
+}
+
+.shushe .shushe_c a {
+	display: block;
+	height: 100%;
+	width: 90%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	margin-left: 10px;
+
+
+}
+.shushe .shushe_c a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.shushe .shushe_c a span {
+
+	margin-top: 5px;
+}
+
+/* 右边 */
+.shushe .shushe_r {
+	width: 33%;
+	display: block;
+	height: 70px;
+}
+
+.shushe .shushe_r a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	margin-left: 10px;
+	border-radius: 5px;
+	background-color: #FFFFFF
+}
+
+ 
+
+.shushe .shushe_r a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.shushe .shushe_r a span {
+
+	margin-top: 5px;
+}
+
+
+.foot{
+	display: flex;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	justify-content: space-around;
+	background-color: #FFFFFF;
+}
+
+.foot .footer_item {
+
+	display: inline-block;
+	width: 20%;
+	margin: 10px;
+	text-decoration: none;
+	color: #333;
+	text-align: center;
+}
+.foot .footer_item img {
+
+	height: 40px;
+	
+}
+.foot .footer_item span {
+	margin-top: 10px;
+	text-decoration: none;
+	
+}
+
+/*------------------------------------------------------------ jiaowu */
+
+.jiaowu   {
+	display: flex;
+	width: 95%;
+	height: 60px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	 
+}
+.jiaowu .jiaowu_l {
+	display: block;
+	width: 33%;
+	background-color: palevioletred;
+	border-radius: 0.625rem;
+	height: 60px;
+
+}
+
+.jiaowu .jiaowu_l a {
+	display: block;
+	text-align: center;
+	padding: auto;
+	line-height: 60px;
+	font-size: 19px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+
+
+/* 中部 */
+.jiaowu .jiaowu_c {
+	width: 33%;
+	display: block;
+	height: 60px;
+}
+
+.jiaowu .jiaowu_c a {
+	display: block;
+	height: 100%;
+	width: 90%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	margin-left: 10px;
+
+
+}
+.jiaowu .jiaowu_c a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.jiaowu .jiaowu_c a span {
+
+	margin-top: 5px;
+}
+
+/* 右边 */
+.jiaowu .jiaowu_r {
+	width: 33%;
+	display: block;
+	height: 60px;
+}
+
+.jiaowu .jiaowu_r a {
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	margin-left: 10px;
+	border-radius: 5px;
+	background-color: #FFFFFF
+}
+
+ 
+
+.jiaowu .jiaowu_r a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.jiaowu .jiaowu_r a span {
+
+	margin-top: 5px;
+}
+/* 0-----------------------------------------------入学---------------------- */
+
+.ruxue {
+	display: flex;
+	width: 95%;
+	height: 140px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 200px;
+}
+
+.ruxue .ruxue_l {
+	display: block;
+	width: 33%;
+	background-color: purple;
+	border-radius: 0.625rem;
+	height: 140px;
+
+}
+
+.ruxue .ruxue_l a {
+	display: block;
+	text-align: center;
+	padding: auto;
+	line-height: 140px;
+	font-size: 19px;
+	color: #FFFFFF;
+	text-decoration: none;
+
+}
+
+/* 中部 */
+.ruxue .ruxue_c {
+	width: 33%;
+	display: block;
+	height: 140px;
+}
+
+.ruxue .ruxue_c a {
+	display: block;
+	height: 45%;
+	width: 90%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+
+	margin-left: 10px;
+
+
+}
+
+.ruxue .ruxue_c a:nth-child(2) {
+	margin-top: 10px;
+
+}
+
+.ruxue .ruxue_c a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.ruxue .ruxue_c a span {
+
+	margin-top: 5px;
+}
+
+.ruxue .ruxue_r {
+	width: 33%;
+	display: block;
+	height: 140px;
+}
+/* 右边 */
+.ruxue .ruxue_r a {
+	display: block;
+	height: 45%;
+	width: 100%;
+	color: #000;
+	padding-top: 20px;
+	line-height: 100%;
+	text-decoration: none;
+	text-align: center;
+	box-sizing: border-box;
+	margin-left: 10px;
+	border-radius: 5px;
+	background-color: #FFFFFF
+}
+
+.ruxue .ruxue_r a:nth-child(2) {
+	margin-top: 10px;
+}
+
+.ruxue .ruxue_r a img {
+	vertical-align: middle;
+	width: 30px;
+}
+
+.ruxue .ruxue_r a span {
+
+	margin-top: 5px;
+}
